@@ -1,4 +1,14 @@
 
-  <h1 style="margin-top: 80px"> {{ title }} </h1>
+  <!--
+    attribute data binding 
+    <h1 style="margin-top: 80px" [innerHtml]="title"> </h1> 
+  -->
+  <!--
+    string interpolation data binding 
+    <h1 style="margin-top: 80px">{{title}}</h1> 
+  -->
+<h1 [hidden]="!isVisible" style="margin-top: 80px">{{ title }} </h1> 
+<!-- <button (click)="changeVisibility()">Change header visibility</button> -->
+
   <br>
-  <app-customers-list></app-customers-list>
+  <app-customers-list [customers]="people"></app-customers-list>
